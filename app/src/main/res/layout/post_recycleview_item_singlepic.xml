@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/post_pic1"
+        android:layout_width="110dp"
+        android:layout_height="97dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/a15" />
+
+    <TextView
+        android:id="@+id/post_author1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:text="作者"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_pic1"
+        app:layout_constraintStart_toEndOf="@+id/post_pic1" />
+
+    <TextView
+        android:id="@+id/post_sumcommentnum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="999"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="23dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="4dp"
+        android:scaleType="fitCenter"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_sumcommentnum1"
+        app:layout_constraintEnd_toStartOf="@+id/post_sumcommentnum1"
+        app:srcCompat="@drawable/psot_comment37" />
+
+    <TextView
+        android:id="@+id/post_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:maxLines="2"
+        app:layout_constraintStart_toEndOf="@+id/post_icon1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/post_icon1"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+
+        app:layout_constraintStart_toEndOf="@+id/post_pic1"
+        app:layout_constraintTop_toTopOf="@+id/post_title1"
+        app:srcCompat="@drawable/ic_topic_ren" />
+
+    <TextView
+        android:id="@+id/post_content1"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:maxLines="2"
+        android:text="TextView"
+
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintStart_toEndOf="@+id/post_pic1"
+        app:layout_constraintTop_toBottomOf="@+id/post_title1" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/post_author1"/>
+</android.support.constraint.ConstraintLayout>

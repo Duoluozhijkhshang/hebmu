@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myinfo"
+    android:orientation="vertical"
+    tools:context=".Fragments.MyinfoFragment">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/selector_white"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="我的信息"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                stv:layout_constraintBottom_toBottomOf="parent"
+                stv:layout_constraintEnd_toEndOf="parent"
+                stv:layout_constraintHorizontal_bias="0.49"
+                stv:layout_constraintStart_toStartOf="parent"
+                stv:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+
+                android:id="@+id/post"
+                stv:layout_constraintBottom_toBottomOf="parent"
+                stv:layout_constraintEnd_toEndOf="parent"
+                stv:layout_constraintTop_toTopOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_news_comment"
+                 />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/main_line"
+        android:background="@color/gray"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp"
+        />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/myinfo_personalinfo"
+                stv:sDividerLineType="both"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                stv:sLeftIconRes="@drawable/cat_1"
+                stv:sLeftIconHeight="64dp"
+                stv:sLeftIconWidth="64dp"
+                stv:sLeftTextString="未登录"
+                stv:sRightTextString="账户管理"
+                stv:sRightIconRes="@drawable/arrow_right_red" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftTextString="黑名单管理"
+                android:id="@+id/myinfo_blacklist"
+
+                stv:sRightIconRes="@drawable/arrow_right_red" />
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                stv:sLeftTextString="学生认证"
+                stv:sRightTextString="未认证"
+                android:id="@+id/myinfo_isstudent"
+                stv:sRightIconRes="@drawable/arrow_right_red"
+                stv:sRightTvDrawableLeft="@drawable/v1"
+                android:layout_height="50dp" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sDividerLineType="bottom"
+                stv:sLeftTextString="设置中心"
+                android:id="@+id/myinfo_setting"
+                stv:sRightIconRes="@drawable/arrow_right_red" />
+
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                stv:sDividerLineType="both"
+                stv:sLeftTextString="意见反馈"
+                android:id="@+id/myinfo_suggestion"
+                stv:sRightIconRes="@drawable/arrow_right_red" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                stv:sDividerLineType="both"
+                stv:sLeftTextString="关于论坛"
+                android:id="@+id/myinfo_about"
+                stv:sRightIconRes="@drawable/arrow_right_red" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fra xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="35dp"
+    android:background="@drawable/logo_white">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:fitsSystemWindows="true"
+        android:adjustViewBounds="true"
+        android:layout_gravity="top"
+        android:src="@drawable/flying" />
+    <!--<TextView-->
+        <!--android:id="@+id/logo_white"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="@dimen/materialviewpager_logoHeight"-->
+        <!--android:text="最好的医大"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="30sp" />-->
+</Fra>

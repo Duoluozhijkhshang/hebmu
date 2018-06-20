@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".Activities.PersonalinfoActivity">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="47dp" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/main_line"
+            android:background="@color/gray"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="0dp"
+            stv:layout_constraintStart_toStartOf="parent"
+            stv:layout_constraintTop_toBottomOf="@+id/include2"/>
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/personal_basicinfo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="2dp"
+            stv:layout_constraintEnd_toEndOf="parent"
+            stv:layout_constraintStart_toStartOf="parent"
+            stv:layout_constraintTop_toBottomOf="@+id/main_line"
+            stv:sLeftBottomTextString="188****8888"
+            stv:sLeftIconHeight="64dp"
+            stv:sLeftIconRes="@drawable/cat_9"
+
+            stv:sLeftIconWidth="64dp"
+            stv:sLeftTopTextString="张三"
+            stv:sLeftViewGravity="left_center"
+            stv:sRightTextString="未学生认证" />
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/personal_unit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            stv:layout_constraintEnd_toEndOf="@+id/personal_basicinfo"
+            stv:layout_constraintHorizontal_bias="0.0"
+            stv:layout_constraintStart_toStartOf="@+id/personal_basicinfo"
+            stv:layout_constraintTop_toBottomOf="@+id/personal_basicinfo"
+            stv:sLeftTextString="单位"
+            stv:sRightTextString="123456789" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/personal_birthday"
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            stv:layout_constraintEnd_toEndOf="parent"
+            stv:layout_constraintStart_toStartOf="parent"
+            stv:layout_constraintTop_toBottomOf="@+id/personal_hobbies"
+            stv:sLeftTextString="生日"
+            stv:sRightTextString="123456789" />
+        <com.allen.library.SuperTextView
+            android:id="@+id/personal_hobbies"
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            stv:layout_constraintEnd_toEndOf="parent"
+            stv:layout_constraintHorizontal_bias="0.0"
+            stv:layout_constraintStart_toStartOf="parent"
+            stv:layout_constraintTop_toBottomOf="@+id/personal_unit"
+            stv:sLeftTextString="爱好"
+            stv:sRightTextString="123456789" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/personal_location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            stv:layout_constraintEnd_toEndOf="@+id/personal_basicinfo"
+            stv:layout_constraintHorizontal_bias="0.0"
+            stv:layout_constraintStart_toStartOf="@+id/personal_basicinfo"
+            stv:layout_constraintTop_toBottomOf="@+id/personal_birthday"
+            stv:sCenterTextColor="@color/gray"
+            stv:sCenterTextSize="12dp"
+            stv:sCenterTextString="*方便寻找同乡具体到市即可"
+            stv:sLeftTextString="地址"
+            stv:sRightTextString="123456789" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/personal_qq"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            stv:layout_constraintEnd_toEndOf="@+id/personal_basicinfo"
+            stv:layout_constraintHorizontal_bias="1.0"
+            stv:layout_constraintStart_toStartOf="@+id/personal_basicinfo"
+            stv:layout_constraintTop_toBottomOf="@+id/personal_location"
+            stv:sLeftTextString="QQ"
+            stv:sRightTextString="123456789" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="*以下信息只会对好友公开"
+            android:textColor="@color/gray"
+            stv:layout_constraintBottom_toTopOf="@+id/personal_qq"
+            stv:layout_constraintStart_toStartOf="@+id/personal_qq" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/personal_phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            stv:layout_constraintEnd_toEndOf="parent"
+            stv:layout_constraintStart_toStartOf="parent"
+            stv:layout_constraintTop_toBottomOf="@+id/personal_qq"
+            stv:sLeftTextString="手机号"
+            stv:sRightTextString="123456789" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/personal_logout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            stv:layout_constraintEnd_toEndOf="parent"
+            stv:layout_constraintStart_toStartOf="parent"
+            stv:layout_constraintTop_toBottomOf="@+id/personal_phonenum"
+            stv:sCenterTextColor="@color/white"
+            stv:sCenterTextString="退出登录"
+            stv:sShapeCornersRadius="10dp"
+            stv:sShapeSelectorNormalColor="@color/red"
+            stv:sShapeSelectorPressedColor="@color/gray"
+            stv:sUseShape="true" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

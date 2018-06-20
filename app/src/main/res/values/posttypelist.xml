@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="letter">
+        <item>-请选择分类-</item>
+        <item>趣事吐槽</item>
+        <item>精彩活动</item>
+        <item>失物招领</item>
+        <item>表白贴</item>
+
+        <item>二手交易帖</item>
+    </string-array>
+
+</resources>

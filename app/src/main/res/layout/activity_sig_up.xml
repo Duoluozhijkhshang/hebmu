@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    tools:context=".Activities.sigUpActivity"
+    android:orientation="vertical">
+    <include layout="@layout/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/main_line"
+            android:background="@color/gray"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include2"/>
+
+        <EditText
+            android:id="@+id/sigUp_edt_studentId"
+            android:layout_width="348dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edittext"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="学号"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColorHint="#888888"
+
+            android:tooltipText="tip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/sigUp_edt_studentpsd"
+            android:layout_width="349dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="密码"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_edittext"
+            android:textColorHint="#888888"
+            android:gravity="top"
+            android:padding="15dp"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/sigUp_edt_studentId"
+            app:layout_constraintStart_toStartOf="@+id/sigUp_edt_studentId"
+            app:layout_constraintTop_toBottomOf="@+id/sigUp_edt_studentId" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:text="*此密码仅用于验证学生身份，不会保存到后台数据库"
+            app:layout_constraintStart_toStartOf="@+id/sigUp_edt_studentpsd"
+            app:layout_constraintTop_toBottomOf="@+id/sigUp_edt_studentpsd" />
+
+        <EditText
+            android:id="@+id/sigUp_edt_psd"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/bg_edittext"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="设置登录密码"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#888888"
+            app:layout_constraintEnd_toEndOf="@+id/sigUp_edt_studentpsd"
+            app:layout_constraintHorizontal_bias="0.205"
+            app:layout_constraintStart_toStartOf="@+id/sigUp_edt_studentpsd"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <EditText
+            android:id="@+id/sigUp_edt_agpsd"
+            android:layout_width="349dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edittext"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="再次输入密码"
+            android:textColor="@color/black"
+            android:maxLength="16"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColorHint="#888888"
+            app:layout_constraintEnd_toEndOf="@+id/sigUp_edt_psd"
+            app:layout_constraintStart_toStartOf="@+id/sigUp_edt_psd"
+            app:layout_constraintTop_toBottomOf="@+id/sigUp_edt_psd" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="*请牢记此密码用于以后登录，学号将作为账号"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="@+id/sigUp_edt_agpsd"
+            app:layout_constraintTop_toBottomOf="@+id/sigUp_edt_agpsd"
+            tools:text="*请牢记此密码用于以后登录，学号将作为账号" />
+
+        <Button
+            android:id="@+id/sigUp_btn_complete"
+            android:layout_width="330dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/sign_button"
+            android:text="完成"
+            android:onClick="oncomplete"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/sigUp_edt_agpsd"
+            app:layout_constraintStart_toStartOf="@+id/sigUp_edt_agpsd"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.056" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

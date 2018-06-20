@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.i_am_kern.Activities.LoginActivity"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    >
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="47dp" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/main_line"
+        android:background="@color/gray"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2"/>
+    <EditText
+        android:id="@+id/login_edt_studentId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="学号"
+        android:textColor="@color/black"
+        android:background="@drawable/bg_edittext"
+        android:textColorHint="#888888"
+        android:gravity="top"
+        android:padding="15dp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="260dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="河北医大欢迎您！"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="32dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="24dp" />
+
+    <EditText
+        android:id="@+id/login_edt_psd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="密码"
+        android:textColor="@color/black"
+        android:background="@drawable/bg_edittext"
+        android:textColorHint="#888888"
+        android:gravity="top"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/login_edt_studentId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_edt_studentId"
+        app:layout_constraintTop_toBottomOf="@+id/login_edt_studentId" />
+
+    <TextView
+        android:id="@+id/login_tv_phonesigup"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:text="非本校可用手机号注册..."
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintEnd_toEndOf="@+id/login_edt_psd"
+        app:layout_constraintTop_toBottomOf="@+id/login_edt_psd" />
+
+    <Button
+        android:id="@+id/login_btn_login"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/sign_button"
+        android:text="登录"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/login_tv_phonesigup"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_edt_psd"
+        app:layout_constraintTop_toBottomOf="@+id/login_tv_phonesigup" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_line"
+        app:srcCompat="@drawable/xiaohui" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="或"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/login_btn_login"
+        app:layout_constraintStart_toStartOf="@+id/login_btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn_login" />
+
+    <Button
+        android:id="@+id/login_btn_singup"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/sign_button"
+        android:text="本校学生注册"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/login_btn_login"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/login_btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+</android.support.constraint.ConstraintLayout>
