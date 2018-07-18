@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,22 +41,29 @@ import com.yuyh.library.imgsel.ISNav;
 import com.yuyh.library.imgsel.common.ImageLoader;
 import com.yuyh.library.imgsel.config.ISListConfig;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.b.V;
 import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 import cn.bmob.v3.listener.UploadBatchListener;
 import dmax.dialog.SpotsDialog;
+import top.zibin.luban.CompressionPredicate;
+import top.zibin.luban.Luban;
+import top.zibin.luban.OnCompressListener;
 
 public class EditPostActivity extends AppCompatActivity {
     private Spinner spinner;
     private RecyclerView recyclerView;
     private String[] piclist;
+    private List<String> listpiclist;
     private MyAdapter myAdapter;
+    private int type =1;
     private ImageView chosepic;
     private final int REQUEST_LIST_CODE = 44;
     private String TAG = "EditPostA..";
@@ -65,6 +73,9 @@ public class EditPostActivity extends AppCompatActivity {
     private AlertDialog alertDialog;
     private EditText title,content;
     private int post_tpye=0;
+    private String postObjectId;
+    private int i = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,17 +83,28 @@ public class EditPostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_post);
         title = findViewById(R.id.editpost_title);
         content = findViewById(R.id.editpost_content);
+        spinner = findViewById(R.id.editpot_spinner);
 
+        Intent intent = getIntent();
+        if (intent!=null){
+            type = intent.getIntExtra("type",1);
+            postObjectId = intent.getStringExtra("postObjectId");
+        }
+        if (type==1){
+            title.setVisibility(View.VISIBLE);
+            spinner.setVisibility(View.VISIBLE);
+        }
         alertDialog= new SpotsDialog(this);
         alertDialog.setCancelable(false);
         piclist = null;
         layoutInflater = getLayoutInflater();
         tongzhilan();
-        spinner = findViewById(R.id.editpot_spinner);
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 post_tpye = i;
+                Log.e(TAG,i+"");
             }
 
             @Override
@@ -178,13 +200,42 @@ public class EditPostActivity extends AppCompatActivity {
 
         if (requestCode == REQUEST_LIST_CODE && resultCode == RESULT_OK && data != null) {
             List<String> pathList = data.getStringArrayListExtra("result");
-            int i= 0;
+            Log.e(TAG,"onAcResult");
             piclist = new String[pathList.size()];
-            for (String path:pathList){
-                myAdapter.addData(path);
-                piclist[i] = path;
-                i++;
-            }
+            Luban.with(this)
+                    .load(pathList)
+                    .ignoreBy(50)
+                    .filter(new CompressionPredicate() {
+                        @Override
+                        public boolean apply(String path) {
+                            return !(TextUtils.isEmpty(path) || path.toLowerCase().endsWith(".gif"));
+                        }
+                    }).setCompressListener(new OnCompressListener() {
+                @Override
+                public void onStart() {
+
+                    Log.e(TAG,"start");
+                }
+
+                @Override
+                public void onSuccess(File file) {
+                    myAdapter.addData(file.getPath());
+                    piclist[i] = file.getPath();
+                    i++;
+                    Log.e(TAG,"success"+file.getPath());
+
+                }
+
+                @Override
+                public void onError(Throwable e) {
+
+                Log.e(TAG,e+"");
+                }
+            }).launch();
+
+
+
+
             myAdapter.notifyDataSetChanged();
         }
     }
@@ -194,6 +245,84 @@ public class EditPostActivity extends AppCompatActivity {
             ToastUtils.showLong("请先登录！");
             return;
         }
+        if (type==2){
+            if (content.getText().toString().equals("")){
+                ToastUtils.showLong("请填写完整");
+            }else {
+                alertDialog.show();
+                if (piclist==null){
+                    Post post1 = new Post();
+                    post1.setObjectId(postObjectId);
+                    Comment comment = new Comment();
+                    comment.setContent(content.getText().toString());
+                    comment.setPost(post1);
+                    comment.setUser(BmobUser.getCurrentUser(Myuser.class));
+                    comment.save(new SaveListener<String>() {
+                        @Override
+                        public void done(String s, BmobException e) {
+                            if (e==null){
+                                ToastUtils.showLong("发表成功！");
+                                alertDialog.dismiss();
+                                finish();
+                            }else {
+                                alertDialog.dismiss();
+                                ToastUtils.showLong("发表失败"+e);
+                            }
+                        }
+                    });
+                }else {
+                    BmobFile.uploadBatch(piclist, new UploadBatchListener() {
+                        @Override
+                        public void onSuccess(final List<BmobFile> list, final List<String> list1) {
+                        if (list1.size()==piclist.length){
+                            Post post1 = new Post();
+                            post1.setObjectId(postObjectId);
+                            Comment comment = new Comment();
+                            comment.setContent(content.getText().toString());
+                            comment.setImages(list);
+                            comment.setPost(post1);
+                            comment.setImageurls(list1);
+                            comment.setUser(BmobUser.getCurrentUser(Myuser.class));
+                            comment.save(new SaveListener<String>() {
+                                @Override
+                                public void done(String s, BmobException e) {
+                                    if (e==null){
+                                        ToastUtils.showLong("发表成功！");
+                                        alertDialog.dismiss();
+                                        finish();
+                                    }else {
+                                        alertDialog.dismiss();
+                                        ToastUtils.showLong("发表失败"+e);
+                                    }
+                                }
+                            });
+                        }
+
+
+                        }
+
+                        @Override
+                        public void onProgress(int i, int i1, int i2, int i3) {
+                            Log.e(TAG,">>"+piclist[i-1]);
+                        }
+
+                        @Override
+                        public void onError(int i, String s) {
+                            alertDialog.dismiss();
+                            ToastUtils.showLong("上传失败"+s);
+                            Log.e(TAG,s+"???");
+                        }
+                    });
+                }
+
+
+
+            }
+            return;
+        }
+
+
+
         alertDialog.show();
         if (title.getText().toString().equals("")||content.getText().toString().equals("")){
             ToastUtils.showLong("请填写完整");
@@ -206,6 +335,7 @@ public class EditPostActivity extends AppCompatActivity {
                 Post post2 = new Post();
                 post2.setAuthor(BmobUser.getCurrentUser(Myuser.class));
                 post2.setTitle(title.getText().toString());
+                post2.setType(post_tpye);
                 post2.setContent(content.getText().toString());
                 post2.save( new SaveListener<String>() {
                     @Override
@@ -216,6 +346,7 @@ public class EditPostActivity extends AppCompatActivity {
                             Comment comment = new Comment();
                             comment.setContent(content.getText().toString());
                             comment.setPost(post1);
+
                             comment.setUser(BmobUser.getCurrentUser(Myuser.class));
                             comment.save(new SaveListener<String>() {
                                 @Override
@@ -242,6 +373,7 @@ public class EditPostActivity extends AppCompatActivity {
                 return;
             }
             Log.e(TAG,"You图");
+
             BmobFile.uploadBatch(piclist, new UploadBatchListener() {
                 @Override
                 public void onSuccess(final List<BmobFile> list, final List<String> list1) {
@@ -262,6 +394,7 @@ public class EditPostActivity extends AppCompatActivity {
                         post2.setTitle(title.getText().toString());
                         post2.setContent(content.getText().toString());
                         post2.setValue("suoluetuUrls",suoluetuUrls);
+                        post2.setType(post_tpye);
                         post2.setItemType(itemType);
                         post2.save( new SaveListener<String>() {
                             @Override
@@ -275,6 +408,7 @@ public class EditPostActivity extends AppCompatActivity {
                                     comment.setContent(content.getText().toString());
                                     comment.setImages(list);
                                     comment.setPost(post1);
+                                    comment.setImageurls(list1);
                                     comment.setUser(BmobUser.getCurrentUser(Myuser.class));
                                     comment.save(new SaveListener<String>() {
                                         @Override

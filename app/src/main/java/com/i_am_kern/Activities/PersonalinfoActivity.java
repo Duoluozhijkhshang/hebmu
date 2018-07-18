@@ -32,9 +32,11 @@ import org.json.JSONTokener;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FetchUserInfoListener;
+import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.UpdateListener;
 
 public class PersonalinfoActivity extends AppCompatActivity implements View.OnClickListener{
@@ -43,29 +45,77 @@ public class PersonalinfoActivity extends AppCompatActivity implements View.OnCl
     LayoutInflater layoutInflater;
     private AlertDialog alertDialog;
     private String content;
+    private String userObjectId;
+    private Myuser currentuser;
+    private int type;
     Myuser myuser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personalinfo);
+        Intent intent = getIntent();
+        myuser = BmobUser.getCurrentUser(Myuser.class);
+        Log.e(">>>",myuser.getObjectId());
+        if (intent!=null){
+            type =intent.getIntExtra("type",1);
+            userObjectId = intent.getStringExtra("userObjectId");
+            if (userObjectId!=null){
+                if (userObjectId.equals(BmobUser.getCurrentUser(Myuser.class).getObjectId())){
+                    type = 1;
+                    myuser = BmobUser.getCurrentUser(Myuser.class);
+                    Log.e(">>>",myuser.getObjectId());
+            }
+
+            }
+        }
+
 
         tongzhilan();
 
         TextView textView = findViewById(R.id.toolbar_title);
-        textView.setText("账户管理");
+        if (type==2){
+            textView.setText("个人信息");
+        }else {
+            textView.setText("账户管理");
+        }
+
 
         findId();
         initlist();
         setviews();
+
     }
 
     private void setviews() {
+        myuser = new Myuser();
+        if (type ==2){
+            BmobQuery<Myuser> myuserBmobQuery = new BmobQuery<Myuser>();
+            myuserBmobQuery.getObject(userObjectId, new QueryListener<Myuser>() {
+                @Override
+                public void done(Myuser cmyuser, BmobException e) {
+                    myuser =cmyuser;
+                    basicinfo.setLeftTopString(myuser.getRealname());
+                    basicinfo.setLeftIcon(touxianglist.get(myuser.getTouxiang()-1));
+                    basicinfo.setRightString(myuser.getIS_STUDENT()?"已学生认证":"校外用户");
+                    basicinfo.setLeftBottomString(myuser.getUsername());
+                    location.setRightString(myuser.getLocation());
+                    hobbies.setRightString(myuser.getHobbies());
+                    unit.setRightString(myuser.getUnit());
+                    birthday.setRightString(myuser.getBirthday());
+                    qq.setRightString(myuser.getQq());
+                    phonenum.setRightString(myuser.getMobilePhoneNumber());
+                }
+            });
+
+
+
+            return;
+        }
+
         BmobUser.fetchUserJsonInfo(new FetchUserInfoListener<String>() {
             @Override
             public void done(String s, BmobException e) {
                 if (e==null){
-                    myuser = new Myuser();
-                    myuser = BmobUser.getCurrentUser(Myuser.class);
                     Log.e(">>>","更新数据"+s);
                     JSONTokener jsonTokener = new JSONTokener(s);
                     JSONObject jsonObject=new JSONObject();
@@ -138,6 +188,9 @@ public class PersonalinfoActivity extends AppCompatActivity implements View.OnCl
         qq.setOnClickListener(this);
         phonenum.setOnClickListener(this);
         birthday.setOnClickListener(this);
+        if (type==2){
+            logout.setCenterString("加为好友");
+        }
         logout.setOnClickListener(this);
     }
 
@@ -186,6 +239,7 @@ public class PersonalinfoActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onClick(View view) {
+        myuser = BmobUser.getCurrentUser(Myuser.class);
         switch (view.getId()){
             case R.id.personal_basicinfo:
                 startActivityForResult(new Intent(PersonalinfoActivity.this,ChosetouxiangActivity.class),1);

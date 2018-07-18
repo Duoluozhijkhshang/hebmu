@@ -21,58 +21,71 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    androidTestCompile('com.android.support:support-annotations:26.1.0') {
+    androidTestImplementation('com.android.support:support-annotations:26.1.0') {
         force = true
     }
     implementation 'com.android.support.constraint:constraint-layout:1.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    compile 'me.majiajie:pager-bottom-tab-strip:2.2.2'
+    implementation 'me.majiajie:pager-bottom-tab-strip:2.2.2'
     //工具类
     implementation 'com.blankj:utilcode:1.16.0'
-    compile 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
     //viewpager
-    compile 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
     //dependencies
-    compile 'com.flaviofaria:kenburnsview:1.0.7'
-    compile 'com.jpardogo.materialtabstrip:library:1.1.0'
-    compile 'com.github.bumptech.glide:glide:4.0.0'
-    compile 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    implementation 'com.jpardogo.materialtabstrip:library:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+
+
+    implementation 'com.android.support:cardview-v7:26.1.0'
     //superTextview
-    compile 'com.github.lygttpod:SuperTextView:2.1.7'
+    implementation 'com.github.lygttpod:SuperTextView:2.1.7'
     //下拉刷新框架
-    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-7'
-    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-7'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-7'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-7'
     //Recyclerview适配器
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     //图片加载库
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation project(':library')
 
-    compile('cn.bmob.android:bmob-sdk:3.6.3') {
+    implementation('cn.bmob.android:bmob-sdk:3.6.3') {
         exclude group: 'com.squareup.okhttp3'
 
     }
 
     //bmob-push：Bmob的推送包
-    compile 'cn.bmob.android:bmob-push:0.8'
+    implementation 'cn.bmob.android:bmob-push:0.8'
     //okgo
-    compile('com.lzy.net:okgo:3.0.4') {
+    implementation('com.lzy.net:okgo:3.0.4') {
         exclude group: 'com.squareup.okio'
     }
 
     //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
-    compile 'cn.bmob.android:http-legacy:1.0'
+    implementation 'cn.bmob.android:http-legacy:1.0'
 
     //jsoup
-    compile 'org.jsoup:jsoup:1.11.2'
+    implementation 'org.jsoup:jsoup:1.11.2'
     //loading Diagnose
-    compile 'com.github.open-android:Loading:1.0'
+    implementation 'com.github.open-android:Loading:1.0'
     //滑轮
-    compile 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+    implementation 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
 
     implementation 'com.android.support:design:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.yuyh.imgsel:library:2.0.3'
+    implementation 'com.yuyh.imgsel:library:2.0.3'
+    //鲁班
+    implementation 'top.zibin:Luban:1.1.6'
+
+    implementation ("com.hanks:htextview-rainbow:0.1.6"){
+        exclude group: 'com.android.support'
+    }
+
+    implementation 'com.lzy.widget:ninegridview:0.2.0'
+
+    implementation 'com.nightonke:boommenu:1.0.9'
 }

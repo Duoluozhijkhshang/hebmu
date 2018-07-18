@@ -8,13 +8,14 @@
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <ImageView
         android:id="@+id/post_icon0"
-        android:layout_width="wrap_content"
-        android:layout_height="23dp"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
         android:layout_marginLeft="12dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_topic_new" />
@@ -23,11 +24,12 @@
         android:id="@+id/post_title0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:text="标题"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_icon0"
         app:layout_constraintStart_toEndOf="@+id/post_icon0"
         app:layout_constraintTop_toTopOf="@+id/post_icon0" />
 
@@ -38,7 +40,7 @@
         android:layout_marginTop="8dp"
         android:text="作者"
         android:textColor="@color/gray"
-        android:textSize="12sp"
+        android:textSize="8sp"
         app:layout_constraintStart_toStartOf="@+id/post_content0"
         app:layout_constraintTop_toBottomOf="@+id/post_content0" />
 
@@ -46,10 +48,11 @@
         android:id="@+id/post_content0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="内容"
+        android:layout_marginTop="4dp"
         android:maxLines="2"
-        android:textColor="@color/black"
+        android:text="内容"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/post_icon0"
         app:layout_constraintTop_toBottomOf="@+id/post_icon0" />
 
@@ -69,8 +72,6 @@
         android:id="@+id/imageView22"
         android:layout_width="23dp"
         android:layout_height="14dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/post_sumcommentnum0"
         app:layout_constraintEnd_toStartOf="@+id/post_sumcommentnum0"
         app:srcCompat="@drawable/psot_comment37" />

@@ -11,6 +11,23 @@ public class Comment extends BmobObject {
     private Post post;
     private List<BmobFile> images;
     private Myuser tragetuser;
+    private List<String> imageurls;
+
+    public Myuser getTragetuser() {
+        return tragetuser;
+    }
+
+    public void setTragetuser(Myuser tragetuser) {
+        this.tragetuser = tragetuser;
+    }
+
+    public List<String> getImageurls() {
+        return imageurls;
+    }
+
+    public void setImageurls(List<String> imageurls) {
+        this.imageurls = imageurls;
+    }
 
     public String getContent() {
         return content;

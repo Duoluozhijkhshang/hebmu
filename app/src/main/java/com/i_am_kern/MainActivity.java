@@ -1,6 +1,8 @@
 package com.i_am_kern;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.view.ViewPager;
@@ -9,10 +11,12 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
 
+import com.bumptech.glide.Glide;
 import com.i_am_kern.Adapter.TabFragmentPagerAdapter;
 import com.i_am_kern.Fragments.FindFragment;
 
@@ -20,9 +24,11 @@ import com.i_am_kern.Fragments.FriendsFragment;
 import com.i_am_kern.Fragments.MyinfoFragment;
 import com.i_am_kern.Fragments.PostFragment;
 import com.i_am_kern.Fragments.subFragment.FindlostFragment;
+import com.lzy.ninegrid.NineGridView;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cookie.CookieJarImpl;
 import com.lzy.okgo.cookie.store.MemoryCookieStore;
+import com.squareup.picasso.Picasso;
 //import com.lzy.okgo.OkGo;
 //import com.lzy.okgo.cookie.CookieJarImpl;
 //import com.lzy.okgo.cookie.store.MemoryCookieStore;
@@ -44,11 +50,30 @@ public class MainActivity extends AppCompatActivity implements PostFragment.OnFr
     private List<android.support.v4.app.Fragment> fragmentList;
     private TabFragmentPagerAdapter tabFragmentPagerAdapter;
     private android.support.v7.widget.Toolbar toolbar;
+    class PicassoImageLoader implements NineGridView.ImageLoader {
 
+        @Override
+        public void onDisplayImage(Context context, ImageView imageView, String url) {
+            Glide.with(context).load(url)//
+                    .placeholder(R.drawable.ic_default_image)//
+                    .error(R.drawable.ic_default_image)//
+                    .into(imageView);
+        }
+
+        @Override
+        public Bitmap getCacheImage(String url) {
+            return null;
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //初始化NineGridView
+        NineGridView.setImageLoader(new PicassoImageLoader());
+
+        /** Picasso 加载 */
+
 
         //初始化Bmob
 

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/postdetail_item_touxiang"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cat_12" />
+
+    <TextView
+        android:id="@+id/postdetail_item_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:text="用户名"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/postdetail_item_touxiang"
+        app:layout_constraintTop_toTopOf="@+id/postdetail_item_touxiang" />
+
+    <ImageView
+        android:id="@+id/postdetail_item_sexicon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@+id/postdetail_item_user"
+        app:layout_constraintTop_toBottomOf="@+id/postdetail_item_user"
+        app:srcCompat="@drawable/ic_profile_gender_female" />
+
+    <TextView
+        android:id="@+id/postdetail_item_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:text="临床16级"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/postdetail_item_sexicon"
+        app:layout_constraintStart_toEndOf="@+id/postdetail_item_sexicon"
+        app:layout_constraintTop_toTopOf="@+id/postdetail_item_sexicon" />
+
+    <TextView
+        android:id="@+id/postdetail_item_luoceng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="楼主"
+        android:textColor="@color/zhishiqiyanse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/postdetail_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18年6月6日"
+        android:textColor="@color/gray"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/postdetail_item_luoceng"
+        app:layout_constraintTop_toBottomOf="@+id/postdetail_item_luoceng" />
+
+    <TextView
+        android:id="@+id/postdetail_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="这是内容"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postdetail_item_touxiang" />
+
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/postdetail_item_ninegridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:ngv_mode="grid"
+        android:padding="8dp"
+        app:ngv_singleImageSize="120dp"
+        app:layout_constraintTop_toBottomOf="@+id/postdetail_item_content"></com.lzy.ninegrid.NineGridView>
+
+
+    <View
+
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/gray"
+        android:paddingTop="4dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postdetail_item_ninegridview" />
+
+</android.support.constraint.ConstraintLayout>

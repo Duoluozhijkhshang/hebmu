@@ -94,13 +94,13 @@ public class PostFragment extends android.support.v4.app.Fragment {
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         //加入数据
         fragmentList = new ArrayList<>();
-        fragmentList.add(FindlostFragment.newInstance());
-        fragmentList.add(FindlostFragment.newInstance());
-        fragmentList.add(FindlostFragment.newInstance());
-        fragmentList.add(FindlostFragment.newInstance());
-        fragmentList.add(FindlostFragment.newInstance());
-        fragmentList.add(FindlostFragment.newInstance());
-        fragmentList.add(FindlostFragment.newInstance());
+        fragmentList.add(FindlostFragment.newInstance(0));
+        fragmentList.add(FindlostFragment.newInstance(1));
+        fragmentList.add(FindlostFragment.newInstance(2));
+        fragmentList.add(FindlostFragment.newInstance(3));
+        fragmentList.add(FindlostFragment.newInstance(4));
+        fragmentList.add(FindlostFragment.newInstance(5));
+        fragmentList.add(FindlostFragment.newInstance(6));
         //复制粘贴处
         ViewPager viewPager = (ViewPager) getView(). findViewById(R.id.moretab_viewPager);
         scrollIndicatorView = (ScrollIndicatorView) getView().findViewById(R.id.moretab_indicator);
