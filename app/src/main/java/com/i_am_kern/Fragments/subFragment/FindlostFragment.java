@@ -23,7 +23,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
+import com.blankj.utilcode.util.Utils;
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -47,6 +49,7 @@ import com.shizhefei.view.indicator.transition.OnTransitionTextListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.bmob.push.lib.util.LogUtil;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.CountListener;
@@ -69,6 +72,7 @@ public class FindlostFragment extends Fragment {
     private  int i = 0;
     private Post apost;
     private boolean loadmoredataok;
+    private final String TAG ="Findlost";
     private int hasloaded_count;
     public static FindlostFragment newInstance(int posttype) {
         FindlostFragment findlostFragment = new FindlostFragment();
@@ -110,9 +114,9 @@ public class FindlostFragment extends Fragment {
         BmobQuery<Post> bmobQuery = new BmobQuery<Post>();
         bmobQuery.include("author.realname");
         if (posttype!=0){
+
             bmobQuery.addWhereEqualTo("type",posttype);
         }
-
         bmobQuery.setLimit(10);
         bmobQuery.setSkip(hasloaded_count);
         bmobQuery.order("-createdAt");
@@ -145,7 +149,11 @@ public class FindlostFragment extends Fragment {
 
         final BmobQuery<Post> bmobQuery = new BmobQuery<Post>();
         bmobQuery.include("author.realname");
-        bmobQuery.addWhereEqualTo("type",posttype);
+        if (posttype!=0){
+
+            bmobQuery.addWhereEqualTo("type",posttype);
+        }
+
         bmobQuery.setLimit(10);
 
         bmobQuery.order("-createdAt");
@@ -165,7 +173,7 @@ public class FindlostFragment extends Fragment {
                     }postList = list;
                     i=0;
                     while (i<=postList.size()-1){
-                        Log.e("i>>>>",i+"???");
+
                         get(i);
                         i++;
                     }
@@ -263,7 +271,7 @@ public class FindlostFragment extends Fragment {
         smartRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-                Log.e(">>>","loadmore");
+
                 loadmoredata();
 
 
@@ -303,12 +311,10 @@ public class FindlostFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        Log.e(">>>","onDestroyView");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.e(">>.","onDestory");
     }
 }

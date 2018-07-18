@@ -265,7 +265,7 @@ public class Post_DetailActivity extends AppCompatActivity {
                         myadpter.notifyDataSetChanged();
 
                     }else {
-                        ToastUtils.showShort("没有更多了");
+
                     }
 
 

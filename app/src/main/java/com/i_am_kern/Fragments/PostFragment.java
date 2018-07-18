@@ -71,7 +71,6 @@ public class PostFragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.e(TAG,"onCreateView");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_post, container, false);
     }
@@ -79,7 +78,6 @@ public class PostFragment extends android.support.v4.app.Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.e(TAG,"onViewCreated");
         //findid
         fab = view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -133,7 +131,7 @@ public class PostFragment extends android.support.v4.app.Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        Log.e(TAG,"onStart");
+
 
     }
 

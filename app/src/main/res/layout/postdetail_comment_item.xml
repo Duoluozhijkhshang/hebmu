@@ -85,13 +85,15 @@
 
     <com.lzy.ninegrid.NineGridView
         android:id="@+id/postdetail_item_ninegridview"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:ngv_mode="grid"
-        android:padding="8dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
         app:ngv_singleImageSize="120dp"
-        app:layout_constraintTop_toBottomOf="@+id/postdetail_item_content"></com.lzy.ninegrid.NineGridView>
+        app:layout_constraintTop_toBottomOf="@+id/postdetail_item_content"
+        android:paddingLeft="32dp"></com.lzy.ninegrid.NineGridView>
 
 
     <View
