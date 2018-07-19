@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -64,7 +65,7 @@ public class EditPostActivity extends AppCompatActivity {
     private List<String> listpiclist;
     private MyAdapter myAdapter;
     private int type =1;
-    private ImageView chosepic;
+    private ImageView chosepic,btnmsg;
     private final int REQUEST_LIST_CODE = 44;
     private String TAG = "EditPostA..";
     private Boolean Ispicsshow = false;
@@ -114,6 +115,8 @@ public class EditPostActivity extends AppCompatActivity {
 
         });
         chosepic = findViewById(R.id.editpost_chosepic);
+        btnmsg = findViewById(R.id.btnmsg);
+        btnmsg.setVisibility(View.GONE);
         linearLayout = findViewById(R.id.editpost_liner);
         chosepic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -481,14 +484,15 @@ public class EditPostActivity extends AppCompatActivity {
             }
             Toolbar toolbar = findViewById(R.id.tool_bar);
             setSupportActionBar(toolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            toolbar.setNavigationIcon(R.drawable.hwpush_ic_toolbar_back);
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(View view) {
                     finish();
                 }
             });
+            toolbar.setTitleTextColor(getResources().getColor(R.color.black,null));
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
 }

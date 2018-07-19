@@ -28,7 +28,7 @@
         android:layout_marginStart="4dp"
         android:text="标题"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/post_icon0"
         app:layout_constraintStart_toEndOf="@+id/post_icon0"
         app:layout_constraintTop_toTopOf="@+id/post_icon0" />
@@ -40,7 +40,7 @@
         android:layout_marginTop="8dp"
         android:text="作者"
         android:textColor="@color/gray"
-        android:textSize="8sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/post_content0"
         app:layout_constraintTop_toBottomOf="@+id/post_content0" />
 
@@ -52,7 +52,7 @@
         android:maxLines="2"
         android:text="内容"
         android:textColor="@color/gray"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/post_icon0"
         app:layout_constraintTop_toBottomOf="@+id/post_icon0" />
 

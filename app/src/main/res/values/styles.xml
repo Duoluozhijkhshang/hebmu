@@ -20,6 +20,12 @@
         <!--是否模糊-->
         <item name="android:backgroundDimEnabled">false</item>
     </style>
-
+    <style name="toolbar_blue_theme" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/bule</item>
+        <item name="android:actionBarSize">46dp</item>
+    </style>
+    <style name="toolbarFitXY" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+    </style>
 
 </resources>

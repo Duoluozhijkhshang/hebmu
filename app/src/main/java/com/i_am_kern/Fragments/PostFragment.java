@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.media.Image;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.annotation.Nullable;
@@ -21,11 +22,13 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.bumptech.glide.Glide;
 import com.i_am_kern.Activities.EditPostActivity;
 import com.i_am_kern.Fragments.subFragment.FindlostFragment;
@@ -59,7 +62,7 @@ public class PostFragment extends android.support.v4.app.Fragment {
     private ScrollIndicatorView scrollIndicatorView;
     private int unSelectTextColor;
     private List<android.support.v4.app.Fragment> fragmentList;
-    private ImageView imageView;
+    private ImageView imageView,msgbtn;
     private FloatingActionButton fab;
 
 
@@ -74,12 +77,47 @@ public class PostFragment extends android.support.v4.app.Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_post, container, false);
     }
+    private void tongzhilan() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+            if (true) {
+                getActivity().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);//设置状态栏黑色字体
+            } else {
+                getActivity().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);//恢复状态栏白色字体
+            }
+            android.support.v7.widget.Toolbar toolbar = getActivity().findViewById(R.id.tool_bar);
+            toolbar.setTitle("???");
+            toolbar.setTitleTextColor(getResources().getColor(R.color.black,null));
 
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    getActivity().finish();
+                }
+            });
+
+
+            ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        }
+    }
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //findid
         fab = view.findViewById(R.id.fab);
+        msgbtn = view.findViewById(R.id.btnmsg);
+        msgbtn.setVisibility(View.VISIBLE);
+        msgbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ToastUtils.showShort(">");
+            }
+        });
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,8 +126,7 @@ public class PostFragment extends android.support.v4.app.Fragment {
             }
         });
         //加入这个fragment的toolbar
-        toolbar = getView().findViewById(R.id.main_toolbar);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+        tongzhilan();
         //加入数据
         fragmentList = new ArrayList<>();
         fragmentList.add(FindlostFragment.newInstance(0));

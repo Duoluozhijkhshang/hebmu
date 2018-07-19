@@ -291,6 +291,7 @@ public class Post_DetailActivity extends AppCompatActivity {
                 intent.putExtra("type",2);
                 intent.putExtra("postObjectId",postObjectId);
                 startActivity(intent);
+                overridePendingTransition(R.anim.ap2,R.anim.ap1);
             }
         });
         likeicon.setOnClickListener(new View.OnClickListener() {
@@ -392,14 +393,15 @@ public class Post_DetailActivity extends AppCompatActivity {
             }
             Toolbar toolbar = findViewById(R.id.tool_bar);
             setSupportActionBar(toolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            toolbar.setNavigationIcon(R.drawable.hwpush_ic_toolbar_back);
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(View view) {
                     finish();
                 }
             });
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         }
     }
 }

@@ -86,7 +86,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +95,7 @@
         <android.support.constraint.ConstraintLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:background="@color/yinse"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -115,8 +115,8 @@
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="64dp"
-                android:layout_height="32dp"
+                android:layout_width="72dp"
+                android:layout_height="36dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"

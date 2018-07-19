@@ -208,7 +208,7 @@ public class PersonalinfoActivity extends AppCompatActivity implements View.OnCl
             Toolbar toolbar = findViewById(R.id.tool_bar);
             setSupportActionBar(toolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            toolbar.setNavigationIcon(R.drawable.hwpush_ic_toolbar_back);
+
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
