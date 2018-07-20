@@ -109,7 +109,7 @@
 
 <color name="lightskyblue">#87CEFA</color><!--亮天蓝色 -->
     <color name="skyblue">#87CEEB</color><!--天蓝色 -->
-
+    <color name="translucent">#01000000</color>
     <color name="grey">#808080</color><!--灰色 -->
     <color name="olive">#808000</color><!--橄榄色 -->
     <color name="purple">#800080</color><!--紫色 -->
@@ -117,9 +117,7 @@
     <color name="aquamarine">#7FFFD4</color><!--碧绿色 -->
     <color name="chartreuse">#7FFF00</color><!--黄绿色 -->
     <color name="lawngreen">#7CFC00</color><!--草绿色 -->
-    <color name="mediumslateblue">#7B68EE</color><!--中暗蓝色
-
--->
+    <color name="mediumslateblue">#7B68EE</color><!--中暗蓝色-->
     <color name="lightslategray">#778899</color><!--亮蓝灰 -->
     <color name="lightslategrey">#778899</color><!--亮蓝灰 -->
     <color name="slategray">#708090</color><!--灰石色 -->

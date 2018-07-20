@@ -81,7 +81,7 @@ dependencies {
     //鲁班
     implementation 'top.zibin:Luban:1.1.6'
 
-    implementation ("com.hanks:htextview-rainbow:0.1.6"){
+    implementation("com.hanks:htextview-rainbow:0.1.6") {
         exclude group: 'com.android.support'
     }
 
