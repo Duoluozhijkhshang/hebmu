@@ -12,26 +12,130 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="VY_llEG2cnRf11dQmREI-0" value="&#xa;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: break-spaces; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;病例筛选: 耐药性局灶性癫痫术前评估患者&lt;/span&gt;&#xa;&#xa;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="310" y="20" width="170" height="60" as="geometry" />
+        <mxCell id="VY_llEG2cnRf11dQmREI-0" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: break-spaces; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;病例筛选: 耐药性局灶性癫痫术前评估患者(n=336)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="20" width="160" height="40" as="geometry" />
         </mxCell>
         <mxCell id="VY_llEG2cnRf11dQmREI-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-3" target="VY_llEG2cnRf11dQmREI-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VY_llEG2cnRf11dQmREI-3" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; font-size: 16px; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;最终研究队列 N=157&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="315" y="160" width="165" height="60" as="geometry" />
+        <mxCell id="VY_llEG2cnRf11dQmREI-3" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;最终研究队列 N=157&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=11;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="315" y="100" width="165" height="40" as="geometry" />
         </mxCell>
         <mxCell id="VY_llEG2cnRf11dQmREI-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="120" as="sourcePoint" />
-            <mxPoint x="500" y="120" as="targetPoint" />
+            <mxPoint x="400" y="80" as="sourcePoint" />
+            <mxPoint x="500" y="80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VY_llEG2cnRf11dQmREI-8" value="排除..." style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="500" y="90" width="90" height="60" as="geometry" />
+        <mxCell id="VY_llEG2cnRf11dQmREI-8" value="排除179例" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="500" y="60" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="VY_llEG2cnRf11dQmREI-9" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; font-size: 16px; white-space-collapse: break-spaces; background-color: rgb(255, 255, 255);&quot;&gt;提取多模态临床文本数据&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; font-size: 16px; white-space-collapse: break-spaces; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; font-size: 16px; white-space-collapse: break-spaces; background-color: rgb(255, 255, 255);&quot;&gt;(现病史, MRI, EEG, PET报告)&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="301.25" y="300" width="192.5" height="60" as="geometry" />
+        <mxCell id="VY_llEG2cnRf11dQmREI-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-9" target="VY_llEG2cnRf11dQmREI-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-9" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; white-space-collapse: break-spaces; background-color: rgb(255, 255, 255);&quot;&gt;提取多模态临床文本数据&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; white-space-collapse: break-spaces; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; white-space-collapse: break-spaces; background-color: rgb(255, 255, 255);&quot;&gt;(病历记录, MRI, EEG, PET报告)&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=11;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="308.13" y="170" width="178.75" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-12" target="VY_llEG2cnRf11dQmREI-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-12" value="LLM定侧/定位" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="347.18" y="240" width="100.63" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-14" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; white-space-collapse: break-spaces; background-color: rgb(255, 255, 255);&quot;&gt;金标准&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; white-space-collapse: break-spaces; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; white-space-collapse: break-spaces; background-color: rgb(255, 255, 255);&quot;&gt;(MDT: 定侧定位致痫脑叶)&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="486.88" y="262.5" width="133.12" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-17" target="VY_llEG2cnRf11dQmREI-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-17" target="VY_llEG2cnRf11dQmREI-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-17" target="VY_llEG2cnRf11dQmREI-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-17" value="四模态基线性能" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="357.5" y="367.5" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-20" target="VY_llEG2cnRf11dQmREI-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-20" target="VY_llEG2cnRf11dQmREI-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-20" target="VY_llEG2cnRf11dQmREI-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-20" target="VY_llEG2cnRf11dQmREI-69">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-20" value="亚组分析" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="210" y="362.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-24" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;MRI状态&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;(阳性 vs 阴性)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="95" y="340" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-26" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;Engel分级&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;(I vs &amp;gt;I)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="95" y="392.5" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-28" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;SEEG使用情况&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;(使用 vs 未使用)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="95" y="440" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-29" target="VY_llEG2cnRf11dQmREI-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-29" target="VY_llEG2cnRf11dQmREI-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-29" value="LLM模型对比" style="whiteSpace=wrap;html=1;fontSize=10;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="480" y="385" width="90" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-32" value="vs Deepseek-r1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="650" y="367.5" width="100" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-34" value="vs Gemini-Pro-2.5" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="650" y="420" width="100" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-44" target="VY_llEG2cnRf11dQmREI-50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-44" target="VY_llEG2cnRf11dQmREI-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VY_llEG2cnRf11dQmREI-44" target="VY_llEG2cnRf11dQmREI-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-44" value="模态消融实验" style="whiteSpace=wrap;html=1;fontSize=11;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="341.26" y="480" width="112.5" height="32.5" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-48" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;移除病历记录&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="190" y="555" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-50" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;移除MRI&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="300" y="555" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-56" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;移除PET&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="410" y="555" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-57" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial, sans-serif; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;移除EEG&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="555" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VY_llEG2cnRf11dQmREI-69" value="&lt;font face=&quot;trebuchet ms, verdana, arial, sans-serif&quot; color=&quot;#333333&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;各型脑叶癫痫&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;aspect=fixed;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="95" y="286.68" width="75" height="30.82" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
